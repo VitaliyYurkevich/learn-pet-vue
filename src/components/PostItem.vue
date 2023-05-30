@@ -1,12 +1,30 @@
 <template>
   <div>
-
+    <div class="post">
+      <div><strong>Название:</strong> {{ post.title }}</div>
+      <div><strong>Название:</strong> {{ post.body }}</div>
+    </div>
+    <div class="post__btn">
+      <my-button
+          @click="$emit('remove', post)"
+      >
+        Удалить
+      </my-button>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
+import MyButton from "@/components/UI/MyButton";
 
+export default {
+  components: {MyButton},
+  props: {
+    post: {
+      type: Object,
+      required: true
+    }
+  }
 }
 </script>
 
