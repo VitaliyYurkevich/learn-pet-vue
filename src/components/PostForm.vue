@@ -6,29 +6,29 @@
     >
       <h4>Создание поста</h4>
 
-      <input
+      <my-input
           v-model="post.title"
-          class="input"
-          type="text"
-          placeholder="Название">
+          placeholder="Название"
+      />
 
-      <input
+      <my-input
           v-model="post.body"
-          class="input"
-          type="text"
-          placeholder="Описание">
+          placeholder="Описание"/>
 
-      <button
-          class="btn"
+      <my-button
+
           @click="createPost"
       >Создать
-      </button>
+      </my-button>
     </form>
   </div>
 </template>
 
 <script>
+import MyButton from "@/components/UI/MyButton";
+import MyInput from "@/components/UI/MyInput";
 export default {
+  components: {MyInput, MyButton},
   data() {
     return {
       post: {
@@ -59,18 +59,7 @@ export default {
 
 }
 
-.input {
-  width: 100%;
-  border: 1px solid teal;
-  padding: 10px 15px;
-  margin-top: 15px;
-}
 
-.btn {
-  margin-top: 15px;
-  align-self: flex-end;
-  padding: 10px 15px;
-  color: teal;
-  border: 1px solid teal;
-}
+
+
 </style>
