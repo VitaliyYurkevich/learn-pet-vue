@@ -16,7 +16,7 @@
 
 <script>
 import PostItem from "@/components/PostItem";
-console.log('')
+
 export default {
   components: {PostItem},
   props: {
