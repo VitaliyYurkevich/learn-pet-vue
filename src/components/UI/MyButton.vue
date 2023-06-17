@@ -8,7 +8,7 @@
 export default {}
 
 </script>
-
+console.log('')
 <style scoped>
 
 .btn {
