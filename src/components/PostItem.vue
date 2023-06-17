@@ -17,7 +17,7 @@
 <script>
 import MyButton from "@/components/UI/MyButton";
 
-console.log('')
+
 export default {
   components: {MyButton},
   props: {
